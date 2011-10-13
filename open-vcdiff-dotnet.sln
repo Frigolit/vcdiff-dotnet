@@ -1,24 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdcom", "google\vsprojects\vcdcom\vcdcom.vcproj", "{A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdcom", "google\vsprojects\vcdcom\vcdcom.vcxproj", "{A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcddec", "google\vsprojects\vcddec\vcddec.vcproj", "{1066F2E6-3F29-4D3D-9BBA-FD1D360099DD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246} = {A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcddec", "google\vsprojects\vcddec\vcddec.vcxproj", "{1066F2E6-3F29-4D3D-9BBA-FD1D360099DD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdenc", "google\vsprojects\vcdenc\vcdenc.vcproj", "{C498DA26-B014-44BD-A387-EB6C3CE16FCF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246} = {A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdenc", "google\vsprojects\vcdenc\vcdenc.vcxproj", "{C498DA26-B014-44BD-A387-EB6C3CE16FCF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdiff-dotnet", "vcdiff-dotnet\vcdiff-dotnet.vcproj", "{C9F57B3E-7C3E-4AED-B1F9-EA446CBFD24C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C498DA26-B014-44BD-A387-EB6C3CE16FCF} = {C498DA26-B014-44BD-A387-EB6C3CE16FCF}
-		{1066F2E6-3F29-4D3D-9BBA-FD1D360099DD} = {1066F2E6-3F29-4D3D-9BBA-FD1D360099DD}
-		{A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246} = {A49D16EE-E69E-4B5D-9CB7-ABEF79BB4246}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcdiff-dotnet", "vcdiff-dotnet\vcdiff-dotnet.vcxproj", "{C9F57B3E-7C3E-4AED-B1F9-EA446CBFD24C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LowLevelApiUsage", "LowLevelApiUsage\LowLevelApiUsage.csproj", "{C03391B2-2409-4D46-844B-0DD9C3FEB406}"
 EndProject
