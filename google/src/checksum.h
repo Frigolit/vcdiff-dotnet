@@ -20,7 +20,7 @@
 #define OPEN_VCDIFF_CHECKSUM_H_
 
 #include <config.h>
-#include "zlib.h"
+#include "zlib/zlib.h"
 
 namespace open_vcdiff {
 
