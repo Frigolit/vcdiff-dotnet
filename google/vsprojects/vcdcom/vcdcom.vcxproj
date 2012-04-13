@@ -87,12 +87,12 @@
     <ClInclude Include="stdint.h" />
     <ClInclude Include="..\..\src\varint_bigendian.h" />
     <ClInclude Include="..\..\src\vcdiff_defs.h" />
-    <ClInclude Include="..\..\src\zconf.h" />
-    <ClInclude Include="..\..\src\zlib.h" />
+    <ClInclude Include="..\..\src\zlib\zconf.h" />
+    <ClInclude Include="..\..\src\zlib\zlib.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\addrcache.cc" />
-    <ClCompile Include="..\..\src\adler32.c" />
+    <ClCompile Include="..\..\src\zlib\adler32.c" />
     <ClCompile Include="..\..\src\codetable.cc" />
     <ClCompile Include="..\..\src\logging.cc" />
     <ClCompile Include="..\..\src\varint_bigendian.cc" />

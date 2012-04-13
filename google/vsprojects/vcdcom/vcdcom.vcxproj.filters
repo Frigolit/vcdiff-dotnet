@@ -39,10 +39,10 @@
     <ClInclude Include="..\..\src\vcdiff_defs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\zconf.h">
+    <ClInclude Include="..\..\src\zlib\zconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\zlib.h">
+    <ClInclude Include="..\..\src\zlib\zlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,7 +50,7 @@
     <ClCompile Include="..\..\src\addrcache.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\adler32.c">
+    <ClCompile Include="..\..\src\zlib\adler32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\codetable.cc">
