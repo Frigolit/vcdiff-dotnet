@@ -11,9 +11,9 @@
 #include "google/vcencoder.h"
 #pragma managed
 
+#pragma unmanaged
 #include "UnmanagedClass.h"
 
-#pragma unmanaged
 namespace VCDiffDotNet {
 	
 	VCDiffWrapper::VCDiffWrapper()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace LowLevelApiUsage
 {
@@ -15,31 +16,32 @@ namespace LowLevelApiUsage
 
         static void EncodingExample()
         {
-            byte[] sourceFile = new byte[] { };
+            byte[] sourceFile = File.ReadAllBytes(@"C:\tmp\diff\test.7z");
             List<byte> result = new List<byte>();
 
             using (VCDiffDotNet.LowLevel.Encoder encoder = new VCDiffDotNet.LowLevel.Encoder())
             {
-                encoder.InitEncoder(sourceFile, false, false, false, false);
+                encoder.InitEncoder(sourceFile, true, true, false, false);
 
                 byte[] partialOutput;
-                encoder.StartEncoding(out partialOutput);
+                var ret = encoder.StartEncoding(out partialOutput);
                 result.AddRange(partialOutput);
 
-                byte[] partOfTargetFile = new byte[] { };
-                encoder.EncodeChunk(partOfTargetFile, out partialOutput);
+                byte[] partOfTargetFile = File.ReadAllBytes(@"C:\tmp\diff\test-new.7z");
+                ret = encoder.EncodeChunk(partOfTargetFile, out partialOutput);
                 result.AddRange(partialOutput);
 
-                encoder.FinishEncoding(out partialOutput);
+                ret = encoder.FinishEncoding(out partialOutput);
                 result.AddRange(partialOutput);
             }
 
             byte[] patchFile = result.ToArray();
+            File.WriteAllBytes(@"C:\tmp\diff\test.patch", patchFile);
         }
 
         static void DecodingExample()
         {
-            byte[] sourceFile = new byte[] { };
+            byte[] sourceFile = File.ReadAllBytes(@"C:\tmp\diff\test.7z");
             List<byte> result = new List<byte>();
 
             using (VCDiffDotNet.LowLevel.Decoder decoder = new VCDiffDotNet.LowLevel.Decoder())
@@ -49,7 +51,7 @@ namespace LowLevelApiUsage
                 decoder.StartDecoding();
 
                 byte[] partialOutput;
-                byte[] partOfPatchFile = new byte[] { };
+                byte[] partOfPatchFile = File.ReadAllBytes(@"C:\tmp\diff\test.patch");
                 decoder.DecodeChunk(partOfPatchFile, out partialOutput);
                 result.AddRange(partialOutput);
 
@@ -57,6 +59,7 @@ namespace LowLevelApiUsage
             }
 
             byte[] targetFile = result.ToArray();
+            File.WriteAllBytes(@"C:\tmp\diff\test-patched.7z", targetFile);
         }
     }
 }

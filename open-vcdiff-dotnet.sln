@@ -71,6 +71,7 @@ Global
 		{C03391B2-2409-4D46-844B-0DD9C3FEB406}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C03391B2-2409-4D46-844B-0DD9C3FEB406}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C03391B2-2409-4D46-844B-0DD9C3FEB406}.Release|Win32.ActiveCfg = Release|Any CPU
+		{C03391B2-2409-4D46-844B-0DD9C3FEB406}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -43,6 +43,7 @@ namespace LowLevel {
 			output = Tools::Convert(buff, size);
 			return true;
 		}
+
 		return false;
 	}
 
@@ -55,7 +56,7 @@ namespace LowLevel {
 			const char* buff;
 			size_t size;
 			Marshal::Copy(target, 0, ptrTargetFile, target->Length);
-			bool result = vcdiffWrapper->EncodeChunk((const char *)ptrTargetFile.ToPointer(), static_cast<size_t>(target->Length), &buff, &size);
+			result = vcdiffWrapper->EncodeChunk((const char *)ptrTargetFile.ToPointer(), static_cast<size_t>(target->Length), &buff, &size);
 			if(result)
 			{
 				output = Tools::Convert(buff, size);
@@ -115,8 +116,8 @@ namespace LowLevel {
 		{
 			const char* buff;
 			size_t size;
-			Marshal::Copy(target, 0, ptrPatchFile, patch->Length);
-			bool result = vcdiffWrapper->EncodeChunk((const char *)ptrPatchFile.ToPointer(), static_cast<size_t>(patch->Length), &buff, &size);
+			Marshal::Copy(patch, 0, ptrPatchFile, patch->Length);
+			result = vcdiffWrapper->DecodeChunk((const char *)ptrPatchFile.ToPointer(), static_cast<size_t>(patch->Length), &buff, &size);
 			if(result)
 			{
 				target = Tools::Convert(buff, size);
