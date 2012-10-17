@@ -2,10 +2,7 @@
 
 #pragma once
 
-#pragma unmanaged
-
 #include <memory>
-//#include <string>
 #include <vector>
 
 #include "google/vcdecoder.h"
@@ -63,5 +60,3 @@ namespace VCDiffDotNet {
 	}; // class VCDiffWrapper
 
 } // namespace vcdiffdotnet
-
-#pragma managed

@@ -2,8 +2,6 @@
 
 #pragma once
 
-#include "UnmanagedClass.h"
-
 using namespace System;
 using namespace System::Runtime::InteropServices;
 
@@ -67,3 +65,4 @@ namespace LowLevel {
 	};
 }
 }
+

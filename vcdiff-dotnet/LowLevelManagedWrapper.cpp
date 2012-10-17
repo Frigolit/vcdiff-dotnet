@@ -1,9 +1,15 @@
-// This is the main DLL file.
+#pragma unmanaged
 
 #include "stdafx.h"
 
-#include "LowLevelManagedWrapper.h"
+#include "google/vcdecoder.h"
+#include "google/vcencoder.h"
+
 #include "UnmanagedClass.h"
+
+#pragma managed
+
+#include "LowLevelManagedWrapper.h"
 
 using namespace System;
 using namespace System::Runtime::InteropServices;

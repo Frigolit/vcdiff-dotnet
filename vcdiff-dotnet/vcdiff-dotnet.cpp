@@ -1,9 +1,14 @@
 ﻿// This is the main DLL file.
 
+#pragma unmanaged
+
 #include "stdafx.h"
 
-#include "vcdiff-dotnet.h"
 #include "UnmanagedClass.h"
+
+#pragma managed
+
+#include "vcdiff-dotnet.h"
 
 using namespace System;
 using namespace System::IO;

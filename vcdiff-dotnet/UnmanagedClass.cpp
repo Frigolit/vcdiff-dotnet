@@ -1,17 +1,10 @@
-﻿#include "stdafx.h"
+﻿#pragma unmanaged
 
-#pragma unmanaged
-#include <stddef.h>  // size_t
-
-#include <memory>
-#include <string>
-#include <vector>
+#include "stdafx.h"
 
 #include "google/vcdecoder.h"
 #include "google/vcencoder.h"
-#pragma managed
 
-#pragma unmanaged
 #include "UnmanagedClass.h"
 
 namespace VCDiffDotNet {

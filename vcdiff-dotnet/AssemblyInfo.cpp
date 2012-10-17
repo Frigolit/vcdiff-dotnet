@@ -1,4 +1,8 @@
+#pragma unmanaged
+
 #include "stdafx.h"
+
+#pragma managed
 
 using namespace System;
 using namespace System::Reflection;
