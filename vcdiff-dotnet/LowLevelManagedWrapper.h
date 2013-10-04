@@ -23,7 +23,7 @@ namespace LowLevel {
 		~Encoder() // IDisposable
 		{
 			// release resource
-			vcdiffWrapper = NULL;
+			delete vcdiffWrapper;
 		}
 
 	protected:

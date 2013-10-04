@@ -11,7 +11,16 @@ namespace VCDiffDotNet {
 	
 	VCDiffWrapper::VCDiffWrapper()
 	{
+		encoder = NULL;
+		decoder = NULL;
+
 		format_flags = open_vcdiff::VCD_STANDARD_FORMAT;
+	}
+
+	VCDiffWrapper::~VCDiffWrapper()
+	{
+		if (encoder != NULL) delete encoder;
+		if (decoder != NULL) delete decoder;
 	}
 
 	void VCDiffWrapper::Settings(
