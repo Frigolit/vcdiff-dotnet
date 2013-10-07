@@ -28,6 +28,7 @@ namespace VCDiffDotNet {
 
 	public:
 		VCDiffWrapper();
+		~VCDiffWrapper();
 
 		void Settings(
 					bool allow_vcd_target,
