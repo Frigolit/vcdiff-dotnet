@@ -20,6 +20,7 @@ namespace LowLevel {
 
 	bool Encoder::InitEncoder(array<Byte> ^source, bool checksum, bool interleaved, bool json, bool target_matches)
 	{
+		if (vcdiffWrapper != NULL) delete vcdiffWrapper;
 		vcdiffWrapper = new VCDiffDotNet::VCDiffWrapper();
 
 		vcdiffWrapper->SetEncodingFormatFlags(checksum, interleaved, json, target_matches);
@@ -89,6 +90,7 @@ namespace LowLevel {
 
 	void Decoder::InitDecoder(array<Byte> ^source, Boolean allow_vcd_target, Int32 max_target_file_size, Int32 max_target_window_size)
 	{
+		if (vcdiffWrapper != NULL) delete vcdiffWrapper;
 		vcdiffWrapper = new VCDiffDotNet::VCDiffWrapper();
 
 		vcdiffWrapper->SetAllowVcdTargetFlag(allow_vcd_target);

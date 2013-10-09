@@ -20,10 +20,15 @@ namespace LowLevel {
 		bool FinishEncoding([Out] array<Byte> ^%output);
 
 	public:
+		Encoder()
+		{
+			vcdiffWrapper = NULL;
+		}
+
 		~Encoder() // IDisposable
 		{
 			// release resource
-			delete vcdiffWrapper;
+			if (vcdiffWrapper != NULL) delete vcdiffWrapper;
 		}
 
 	protected:
@@ -45,10 +50,15 @@ namespace LowLevel {
 		bool FinishDecoding();
 
 	public:
+		Decoder()
+		{
+			vcdiffWrapper = NULL;
+		}
+
 		~Decoder() // IDisposable
 		{
 			// release resource
-			vcdiffWrapper = NULL;
+			if (vcdiffWrapper != NULL) delete vcdiffWrapper;
 		}
 
 	protected:
