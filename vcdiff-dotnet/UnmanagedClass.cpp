@@ -33,19 +33,19 @@ namespace VCDiffDotNet {
 				size_t max_target_window_size)
 	{
 		if (interleaved) {
-			format_flags |= open_vcdiff::VCD_FORMAT_INTERLEAVED;
+			this->format_flags |= open_vcdiff::VCD_FORMAT_INTERLEAVED;
 		}
 		if (checksum) {
-			format_flags |= open_vcdiff::VCD_FORMAT_CHECKSUM;
+			this->format_flags |= open_vcdiff::VCD_FORMAT_CHECKSUM;
 		}
 		if (json) {
-			format_flags |= open_vcdiff::VCD_FORMAT_JSON;
+			this->format_flags |= open_vcdiff::VCD_FORMAT_JSON;
 		}
 
-		allow_vcd_target = allow_vcd_target;
-		target_matches = target_matches;
-		max_target_file_size = max_target_file_size;
-		max_target_window_size = max_target_window_size;
+		this->allow_vcd_target = allow_vcd_target;
+		this->target_matches = target_matches;
+		this->max_target_file_size = max_target_file_size;
+		this->max_target_window_size = max_target_window_size;
 	};
 
 	void VCDiffWrapper::SetEncodingFormatFlags(bool checksum, bool interleaved, bool json, bool target_matches)
